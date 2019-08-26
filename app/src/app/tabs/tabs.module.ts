@@ -14,6 +14,7 @@ const routes: Routes = [
     children:[
       { path: 'tab-map', loadChildren: () => import('../tab-map/tab-map.module').then(m => m.TabMapPageModule) },
       { path: 'tab-upload-image', loadChildren: () => import('../tab-upload-image/tab-upload-image.module').then(m => m.TabUploadImagePageModule) },
+      { path: 'tab-account', loadChildren: () => import('../tab-account/tab-account.module').then(m => m.TabAccountPageModule) },
     ]
   },
   {
