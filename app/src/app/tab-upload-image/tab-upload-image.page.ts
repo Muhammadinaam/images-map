@@ -215,7 +215,7 @@ async uploadImageData(formData: FormData, position) {
       formData.append('default_long', long.toString());
      }).catch((error) => {
        console.log(error);
-       alert('Error getting location:' + error);
+       alert('Error getting location:' + error + " Please go to Settings and set High accuracy for Location mode.");
        return;
      });
 
@@ -229,6 +229,7 @@ async uploadImageData(formData: FormData, position) {
             if (res['success']) {
                 this.presentToast(res['message']);
                 this.deleteImage(this.images[position], position, false);
+                alert("Image uploaded successfully");
             } else {
                 this.presentToast(res['message'])
             }

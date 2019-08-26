@@ -38,4 +38,14 @@ class ImageController extends Controller
             return ['success' => true, 'message' => 'Error: ' . $ex->getMessage()];
         }
     }
+
+    public function getImages()
+    {
+        
+
+        $images = Image::where('user_id', Auth::user()->id)
+            ->get();
+
+        return $images;
+    }
 }

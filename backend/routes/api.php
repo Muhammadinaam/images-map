@@ -24,4 +24,6 @@ Route::middleware('auth:api')->group(function(){
 
     Route::post('upload-image', 'ImageController@upload');
 
+    Route::get('get-images', 'ImageController@getImages');
+
 });
