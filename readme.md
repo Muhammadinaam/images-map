@@ -12,6 +12,7 @@ Instructions:
 - create mysql database: imagesapp (check .env file)
 - Open backend and run following commands 
        "composer install" 
+       "php artisan migrate"
        "php artisan passport:install"
        "php artisan migrate"
 
